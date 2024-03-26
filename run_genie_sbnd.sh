@@ -15,13 +15,13 @@ export fluxhisto="flux_sbnd_"${probelabel}
 export outdir="/pnfs/sbnd/persistent/users/apapadop/GENIETweakedSamples/"${version}"_"${tune}"_"${interaction}"_"${probelabel}
 
 # Produce the GENIE splines
-gmkspl -p ${probe} -t ${target} -e ${maxE} -o ${probe}_${target}_${interaction}_${version}_${tune}.xml --tune ${tune} --event-generator-list ${interaction}
+#gmkspl -p ${probe} -t ${target} -e ${maxE} -o ${probe}_${target}_${interaction}_${version}_${tune}.xml --tune ${tune} --event-generator-list ${interaction}
 
 # Convert the xml splines to root format
 gspl2root -f ${probe}_${target}_${interaction}_${version}_${tune}.xml --event-generator-list ${interaction} -p ${probe} -t ${target} -o ${outdir}/${probe}_${target}_${interaction}_${version}_${tune}.xml.root --tune ${tune}
 
 # Generate GENIE events
-gevgen -n $events -p ${probe} -t ${target} -e ${minE},${maxE}  --event-generator-list ${interaction} --tune ${tune} --cross-sections ${probe}_${target}_${interaction}_${version}_${tune}.xml -f ${fluxfile},${fluxhisto} -o ${outdir}/${probe}_${target}_${interaction}_${version}_${tune}.ghep.root
+gevgen -n $events -p ${probe} -t ${target} -e ${minE},${maxE}  --event-generator-list ${interaction} --tune ${tune} --cross-sections ${probe}_${target}_${interaction}_${version}_${tune}.xml -f ${fluxfile},${fluxhisto} -o ${outdir}/${probe}_${target}_${interaction}_${version}_${tune}.ghep.root 
 
 # Convert file from ghep to gst
 gntpc -f gst -i ${outdir}/${probe}_${target}_${interaction}_${version}_${tune}.ghep.root -o ${outdir} /${probe}_${target}_${interaction}_${version}_${tune}.gst.root --tune ${tune}
