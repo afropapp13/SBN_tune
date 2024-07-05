@@ -1,0 +1,17 @@
+<nuisance>
+	<config UseSVDInverse="1"/>
+	<sample name="MicroBooNE_CC1Mu1p_XSec_1DDeltaPT_nu" input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/v3_4_0_AR23_20i_00_000_CC_numu/14_1000180400_CC_v3_4_0_AR23_20i_00_000.gprep.root" />
+	<sample name="MicroBooNE_CC1Mu1p_XSec_1DDeltaAlphaT_nu" input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/v3_4_0_AR23_20i_00_000_CC_numu/14_1000180400_CC_v3_4_0_AR23_20i_00_000.gprep.root" />
+	<sample name="MicroBooNE_CC1Mu1p_XSec_1DDeltaPhiT_nu" input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/v3_4_0_AR23_20i_00_000_CC_numu/14_1000180400_CC_v3_4_0_AR23_20i_00_000.gprep.root" />
+	<sample name="MicroBooNE_CC1Mu1p_XSec_1DMuonCosTheta_nu" input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/v3_4_0_AR23_20i_00_000_CC_numu/14_1000180400_CC_v3_4_0_AR23_20i_00_000.gprep.root" />
+	<sample name="MicroBooNE_CC1Mu1p_XSec_1DProtonCosTheta_nu" input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/v3_4_0_AR23_20i_00_000_CC_numu/14_1000180400_CC_v3_4_0_AR23_20i_00_000.gprep.root" />
+	<sample name="MicroBooNE_CC1Mu1p_XSec_1DMuonMomentum_nu" input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/v3_4_0_AR23_20i_00_000_CC_numu/14_1000180400_CC_v3_4_0_AR23_20i_00_000.gprep.root" />
+	<sample name="MicroBooNE_CC1Mu1p_XSec_1DProtonMomentum_nu" input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/v3_4_0_AR23_20i_00_000_CC_numu/14_1000180400_CC_v3_4_0_AR23_20i_00_000.gprep.root" />
+	<sample name="MicroBooNE_CC1Mu1p_XSec_1DDeltaPn_nu" input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/v3_4_0_AR23_20i_00_000_CC_numu/14_1000180400_CC_v3_4_0_AR23_20i_00_000.gprep.root" />
+	<sample name="MicroBooNE_CC1Mu1p_XSec_1DDeltaPtx_nu" input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/v3_4_0_AR23_20i_00_000_CC_numu/14_1000180400_CC_v3_4_0_AR23_20i_00_000.gprep.root" />
+	<sample name="MicroBooNE_CC1Mu1p_XSec_1DDeltaPty_nu" input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/v3_4_0_AR23_20i_00_000_CC_numu/14_1000180400_CC_v3_4_0_AR23_20i_00_000.gprep.root" />
+	<sample name="MicroBooNE_CC1Mu1p_XSec_1DECal_nu" input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/v3_4_0_AR23_20i_00_000_CC_numu/14_1000180400_CC_v3_4_0_AR23_20i_00_000.gprep.root" />
+	<sample name="MicroBooNE_CC1Mu1p_XSec_1DEQE_nu" input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/v3_4_0_AR23_20i_00_000_CC_numu/14_1000180400_CC_v3_4_0_AR23_20i_00_000.gprep.root" />
+	<parameter type="nusyst_parameter" name="NormCCMEC" nominal="-2.1508" state="Fix"/>
+	<DUNERwt ConfigFHiCL="/exp/dune/app/users/jwolfs/t2k_tune/infiles/myParamHeader.fcl"/>
+</nuisance>

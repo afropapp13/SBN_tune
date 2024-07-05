@@ -10,12 +10,12 @@ export version="v3_4_0"
 export target="1000180400"
 export minE="0."
 export maxE="10."
-export fluxfile="/pnfs/sbnd/persistent/users/apapadop/Fluxes/sbnd_flux.root"
+export fluxfile="/pnfs/dune/persistent/users/apapadop/Fluxes/sbnd_flux.root"
 export fluxhisto="flux_sbnd_"${probelabel}
-export outdir="/pnfs/sbnd/persistent/users/apapadop/GENIETweakedSamples/"${version}"_"${tune}"_"${interaction}"_"${probelabel}
+export outdir="/pnfs/dune/persistent/users/apapadop/GENIE_SBN/"${version}"_"${tune}"_"${interaction}"_"${probelabel}
 
 # Produce the GENIE splines
-#gmkspl -p ${probe} -t ${target} -e ${maxE} -o ${probe}_${target}_${interaction}_${version}_${tune}.xml --tune ${tune} --event-generator-list ${interaction}
+gmkspl -p ${probe} -t ${target} -e ${maxE} -o ${probe}_${target}_${interaction}_${version}_${tune}.xml --tune ${tune} --event-generator-list ${interaction}
 
 # Convert the xml splines to root format
 gspl2root -f ${probe}_${target}_${interaction}_${version}_${tune}.xml --event-generator-list ${interaction} -p ${probe} -t ${target} -o ${outdir}/${probe}_${target}_${interaction}_${version}_${tune}.xml.root --tune ${tune}

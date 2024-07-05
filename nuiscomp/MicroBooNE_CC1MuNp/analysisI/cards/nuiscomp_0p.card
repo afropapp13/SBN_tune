@@ -1,0 +1,8 @@
+<nuisance>
+	<config UseSVDInverse="1"/>
+	<sample name="MicroBooNE_CC1MuNp_XSec_1DPmu_nu" input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/v3_4_0_AR23_20i_00_000_CC_numu/14_1000180400_CC_v3_4_0_AR23_20i_00_000.gprep.root" />
+        <sample name="MicroBooNE_CC1MuNp_XSec_1Dcosmu_nu"input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/v3_4_0_AR23_20i_00_000_CC_numu/14_1000180400_CC_v3_4_0_AR23_20i_00_000.gprep.root" />
+        <sample name="MicroBooNE_CC1MuNp_XSec_1DPp_nu" input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/v3_4_0_AR23_20i_00_000_CC_numu/14_1000180400_CC_v3_4_0_AR23_20i_00_000.gprep.root" />
+        <sample name="MicroBooNE_CC1MuNp_XSec_1Dcosp_nu" input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/v3_4_0_AR23_20i_00_000_CC_numu/14_1000180400_CC_v3_4_0_AR23_20i_00_000.gprep.root" />
+        <sample name="MicroBooNE_CC1MuNp_XSec_1Dthetamup_nu" input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/v3_4_0_AR23_20i_00_000_CC_numu/14_1000180400_CC_v3_4_0_AR23_20i_00_000.gprep.root" />
+</nuisance>
