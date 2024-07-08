@@ -8,7 +8,7 @@
 #include <iostream>
 #include <fstream>
 
-#include "../Constants.sh"
+#include "../Constants.h"
 
 using namespace Constants;
 

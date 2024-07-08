@@ -9,5 +9,5 @@
 	<covar name="b4" input="DIAL:b4;0;1" type="GENIE:GAUSPULL:FRAC:"/>
 	<parameter type="nusyst_parameter" name="b3" nominal="0" low="-5" high="5" step="0.1" state="FREE"/> 
 	<covar name="b3" input="DIAL:b3;0;1" type="GENIE:GAUSPULL:FRAC:"/>
-	<DUNERwt ConfigFHiCL="/exp/dune/app/users/jwolfs/t2k_tune/infiles/myParamHeader.fcl"/>
+	<DUNERwt ConfigFHiCL="../myParamHeader.fcl"/>
 </nuisance>
