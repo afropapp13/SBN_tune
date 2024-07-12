@@ -1,0 +1,4 @@
+<nuisance>
+	<config UseSVDInverse="1"/>
+	<sample name="MicroBooNE_CC1Mu1p_XSec_1DDeltaPT_nu" input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/v3_4_0_G18_10a_02_11a_CC_numu/14_1000180400_CC_v3_4_0_G18_10a_02_11a.gprep.root" />
+</nuisance>

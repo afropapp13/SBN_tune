@@ -1,17 +1,22 @@
+#include "../Constants.h"
+
 #include <sys/stat.h>
+
+using namespace Constants;
 
 void plot_tweaks() {
 
         vector<TString> sample_vector;
-        //sample_vector.push_back("CC_anue");
-        //sample_vector.push_back("CC_anumu");
-        //sample_vector.push_back("CC_nue");
+        sample_vector.push_back("CC_anue");
+        sample_vector.push_back("CC_anumu");
+        sample_vector.push_back("CC_nue");
         sample_vector.push_back("CC_numu");
-        //sample_vector.push_back("NC_anue");
-        //sample_vector.push_back("NC_anumu");
-        //sample_vector.push_back("NC_nue");
-        //sample_vector.push_back("NC_numu");
-        //sample_vector.push_back("numi_fhc_icarus_CC_anue");
+        sample_vector.push_back("NC_anue");
+        sample_vector.push_back("NC_anumu");
+        sample_vector.push_back("NC_nue");
+        sample_vector.push_back("NC_numu");
+        
+	//sample_vector.push_back("numi_fhc_icarus_CC_anue");
         //sample_vector.push_back("numi_fhc_icarus_CC_anumu");
         //sample_vector.push_back("numi_fhc_icarus_CC_nue");
         //sample_vector.push_back("numi_fhc_icarus_CC_numu");
@@ -98,7 +103,7 @@ void plot_tweaks() {
 
 		// Data input
 		TFile *file_cv = new TFile(flat_ana_outfile + "/nominal_hists_"+sample+".root", "read");
-		TFile *file_1sigma = new TFile(tweaked_outfile + "/1sigma_hists_"+sample+".root", "read");
+		TFile *file_1sigma = new TFile(flat_ana_outfile + "/1sigma_hists_"+sample+".root", "read");
 
 		for (TString var: var_vector) {
         	

@@ -2,7 +2,7 @@
 	<config GENIETune="AR23_20i_00_000" GENIEWeightEngine_CCQEMode="kModeZExp" FitWeight_fGenieRW_veto="hadro_fzone"/>
 	<config UseSVDInverse="1"/>
 	<config savenominal="1"/>
-	<sample name="T2K_CC0pi_XSec_2DPcos_nu_I" input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/T2K_v3_4_0_AR23_20i_00_000_CC_numu/14_1000180400_CC_v3_4_0_AR23_20i_00_000.gprep.root"/>
+	<sample name="T2K_CC0pi_XSec_2DPcos_nu_I" input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/T2K_v3_4_0_AR23_20i_00_000_CC_numu/14_1000060120_CC_v3_4_0_AR23_20i_00_000.gprep.root"/>
 	<parameter type="nusyst_parameter" name="RPA_CCQE" nominal="0" low="-5" high="5" step="0.1" state="FREE"/> 
 	<covar name="RPA_CCQE" input="DIAL:RPA_CCQE;0;1" type="GENIE:GAUSPULL:FRAC:"/>
 	<DUNERwt ConfigFHiCL="../myParamHeader.fcl"/>

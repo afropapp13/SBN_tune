@@ -79,7 +79,7 @@ void FlatTreeAnalyzer::Loop() {
 	int Selected_uB_Events = 0;
 	int Selected_T2K_Events = 0;
         ofstream outfile;
-	outfile.open("/events_"+InputBeam+InputCurrent+InputFlavor+".csv");
+	outfile.open( flat_ana_outfile +  "/events_"+InputBeam+InputCurrent+InputFlavor+".csv");
 	outfile<<"Inc"<<","<<"uBExc"<<","<<"T2KExc"<<","<<"Enu"<<","<<"Q2"<<","<<"Pmu"<<","<<"Cos_mu"<<","<<"Weight"<<","<<endl;
 
 	// Plot declaration

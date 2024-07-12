@@ -1,0 +1,13 @@
+<nuisance>
+	<config GENIETune="AR23_20i_00_000" GENIEWeightEngine_CCQEMode="kModeZExp" FitWeight_fGenieRW_veto="hadro_fzone" />
+	<config UseSVDInverse="1"/>
+	<sample name="T2K_NuMu_CC0pi_C_XSec_2DPcos" input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/v3_4_0_AR23_20i_00_000_CC_numu/14_1000180400_CC_v3_4_0_AR23_20i_00_000.gprep.root" />
+	<sample name="MicroBooNE_CC1Mu1p_XSec_1DDeltaPT_nu" input="GENIE:/pnfs/dune/persistent/users/apapadop/GENIE_SBN/v3_4_0_AR23_20i_00_000_CC_numu/14_1000180400_CC_v3_4_0_AR23_20i_00_000.gprep.root" />
+	<parameter type="nusyst_parameter" name="RPA_CCQE" nominal=" 0.1090778" state="Fix"/>
+	<parameter type="nusyst_parameter" name="b4" nominal="0.0370007" state="Fix"/>
+	<parameter type="nusyst_parameter" name="b3" nominal="0.0337943" state="Fix"/>
+	<parameter type="nusyst_parameter" name="b2" nominal="-0.5397662" state="Fix"/>
+	<parameter type="nusyst_parameter" name="b1" nominal="-0.1361182" state="Fix"/>
+	<parameter type="nusyst_parameter" name="NormCCMEC" nominal="-0.4022071" state="Fix"/>
+	<DUNERwt ConfigFHiCL="../../myParamHeader.fcl"/>
+</nuisance>

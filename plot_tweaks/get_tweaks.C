@@ -105,22 +105,23 @@ void get_tweaks() {
 	sample_vector.push_back("NC_anumu");
 	sample_vector.push_back("NC_nue");
 	sample_vector.push_back("NC_numu");
-	sample_vector.push_back("numi_fhc_icarus_CC_anue");
-	sample_vector.push_back("numi_fhc_icarus_CC_anumu");
-	sample_vector.push_back("numi_fhc_icarus_CC_nue");
-	sample_vector.push_back("numi_fhc_icarus_CC_numu");
-	sample_vector.push_back("numi_fhc_icarus_NC_anue");
-	sample_vector.push_back("numi_fhc_icarus_NC_anumu");
-	sample_vector.push_back("numi_fhc_icarus_NC_nue");
-	sample_vector.push_back("numi_fhc_icarus_NC_numu");
-	sample_vector.push_back("numi_rhc_icarus_CC_anue");
-	sample_vector.push_back("numi_rhc_icarus_CC_anumu");
-	sample_vector.push_back("numi_rhc_icarus_CC_nue");
-	sample_vector.push_back("numi_rhc_icarus_CC_numu");
-	sample_vector.push_back("numi_rhc_icarus_NC_anue");
-	sample_vector.push_back("numi_rhc_icarus_NC_anumu");
-	sample_vector.push_back("numi_rhc_icarus_NC_nue");
-	sample_vector.push_back("numi_rhc_icarus_NC_numu");
+	
+	//sample_vector.push_back("numi_fhc_icarus_CC_anue");
+	//sample_vector.push_back("numi_fhc_icarus_CC_anumu");
+	//sample_vector.push_back("numi_fhc_icarus_CC_nue");
+	//sample_vector.push_back("numi_fhc_icarus_CC_numu");
+	//sample_vector.push_back("numi_fhc_icarus_NC_anue");
+	//sample_vector.push_back("numi_fhc_icarus_NC_anumu");
+	//sample_vector.push_back("numi_fhc_icarus_NC_nue");
+	//sample_vector.push_back("numi_fhc_icarus_NC_numu");
+	//sample_vector.push_back("numi_rhc_icarus_CC_anue");
+	//sample_vector.push_back("numi_rhc_icarus_CC_anumu");
+	//sample_vector.push_back("numi_rhc_icarus_CC_nue");
+	//sample_vector.push_back("numi_rhc_icarus_CC_numu");
+	//sample_vector.push_back("numi_rhc_icarus_NC_anue");
+	//sample_vector.push_back("numi_rhc_icarus_NC_anumu");
+	//sample_vector.push_back("numi_rhc_icarus_NC_nue");
+	//sample_vector.push_back("numi_rhc_icarus_NC_numu");
 	sample_vector.push_back("T2K_CC_numu");
 	int num_samples = sample_vector.size();
 
@@ -196,6 +197,7 @@ void get_tweaks() {
 		
 		fstream infile;
 		infile.open(flat_ana_outfile + "/events_"+sample+".csv");
+		cout << flat_ana_outfile + "/events_"+sample+".csv" << endl;
 		string line, entry;
 		int linen = 0, entryn = 0;
 		
@@ -222,6 +224,7 @@ void get_tweaks() {
 		// Delcare files I'll need in for-loop
 		TFile *root_in = new TFile(flat_ana_outfile + "/nominal_hists_"+sample+".root", "read");
 		TFile *tweak_file = TFile::Open( tweaked_outfile + "/tweaks_"+sample+".root");
+		cout << tweaked_outfile + "/tweaks_"+sample+".root" << endl;
 		TTreeReader myReader("events", tweak_file);
 		TFile *root_out = new TFile(flat_ana_outfile + "/1sigma_hists_"+sample+".root", "recreate");
 		
@@ -248,18 +251,23 @@ void get_tweaks() {
 			// Fill the plots
 		        int event = -1; 
 			while (myReader.Next()) {
+			
 				event += 1;
 				if (vInc[event] != 1) {continue;}
+				
 				int ntweaks = *ntweak_responses;
+				
 				if (ntweaks != nuniverses) {
 					cout<<"ntweaks = "<<ntweaks<<" is not the expected number, "<<nuniverses<<endl;
 					return;
 				}
+				
 				for (int universe=0; universe<ntweaks; universe++) {
 					double tweak = tweak_responses[universe];
 		        		EnuIncPlot[universe]->Fill(vEnu[event], tweak*vWeight[event]);
 		        		Q2IncPlot[universe]->Fill(vQ2[event], tweak*vWeight[event]);
 				}
+			
 			}
 
 			myReader.Restart();	
@@ -295,7 +303,7 @@ void get_tweaks() {
 			EnuIncPlot_lo->Write("EnuInc_"+param+"_minus1");
 			Q2IncPlot_lo->Write("Q2Inc_"+param+"_minus1");
 
-		}	
+		} // end of the regular parameter vector	
 		
 		cout<<"Processing the extra genie parameters"<<endl;
 
@@ -354,6 +362,8 @@ void get_tweaks() {
 			EnuIncPlot_hi->Write("EnuInc_"+special_param+"_error");
 			Q2IncPlot_hi->Write("Q2Inc_"+special_param+"_error");
 		
-		}	
-	}
-}
+		} // end of the special parameter loop 
+			
+	} // end of the loop over the samples
+
+} // end of the program
